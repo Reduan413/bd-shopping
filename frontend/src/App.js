@@ -5,7 +5,9 @@ import Navber from './components/Navbar';
 import ProductsContextProvider from './Global/ProductsContext'
 import Products  from './components/Products'
 import Cart from './components/Cart'
+import ProductScreen from './components/ProductScreen'
 import NotFound from  './components/NotFound'
+import Signin from './components/Signin'
 
 function App() {
   return (
@@ -15,7 +17,9 @@ function App() {
         <Navber/>
         <Switch>
           <Route path="/" exact component={Products} />
-          <Route path="/cart" exact component={Cart} />
+          <Route path="/cart/:id?" exact component={Cart} />
+          <Route path="/products/:id" exact component={ProductScreen} />
+          <Route path="/signin" exact component={Signin} />
           <Route component={NotFound} />
         </Switch>
       </Router>

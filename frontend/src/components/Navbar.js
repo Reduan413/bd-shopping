@@ -10,7 +10,8 @@ const Navber = () => {
             <ul className="right">
                 <li>
                     <Link to="cart"> <span className="shoppingCart"><i class="fas fa-cart-plus"></i>
-                        <span className="cardCount">0</span></span></Link>
+                        </span></Link>
+                    <Link to="/signin" className="shoppingCart">SignIn</Link>
                 </li>
             </ul>
         </nav>
